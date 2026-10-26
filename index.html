@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Epsilon - Delta</title><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
+<body><main><header><h1>EPSILON - DELTA</h1><nav aria-label="Function"><button id="quadratic" aria-pressed="true">1 &nbsp; f(x) = x²</button><button id="jump" aria-pressed="false">2 &nbsp; f(x) = -1 / +1</button></nav></header>
+<div class="workspace"><section class="graph-panel"><div class="graph-title"><span id="base">a = 2</span><span>Auto scale</span></div><canvas id="graph" aria-label="Function graph with epsilon and delta bands and sampled points"></canvas><div class="graph-note">x = a excluded</div></section>
+<aside><label class="purple" for="epsilon">epsilon <output id="epsilon-value"></output></label><input id="epsilon" type="range" min="0" max="1000" step="1">
+<button id="auto" aria-pressed="true">Auto delta: ON</button><div id="sides" hidden>Left: -1 &nbsp; Right: +1</div>
+<label class="blue" for="delta">delta <output id="delta-value"></output></label><input id="delta" type="range" min="0" max="1000" step="1">
+<label class="purple" for="candidate">L <output id="candidate-value"></output></label><input id="candidate" type="range" min="2" max="6" step="0.001">
+<button id="reset">Reset [R]</button><div class="legend"><span class="green">● <span>Pass</span></span><span class="red">× <span>Fail</span></span></div><div class="formula blue">0 &lt; |x-a| &lt; delta</div><div class="formula purple">|f(x)-L| &lt; epsilon</div></aside></div>
+<footer><section><h2>MATH</h2><strong id="math-result" class="green">Limit = 4</strong><p id="math-detail">delta = min(1, epsilon / 5)</p></section><section><h2>SAMPLES</h2><strong id="sample-result" class="green"></strong><p id="sample-detail"></p></section></footer></main></body></html>
